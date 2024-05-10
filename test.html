@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <body>
+      <script type="text/javascript">
+        
+        let x = 5;
+        let y = "Ayo";
+        console.log(x);
+
+        let z;
+        console.log(z);
+        console.log(4 % 2);
+        console.log("John" + "is" + "a" + "boy"); //concatonation
+
+        let a = 5;
+        let b = 3;
+        let result = a + b;
+        console.log(result);
+        console.log(a > b);
+        console.log(a & b); //bitwise operator
+
+        let isAdmin = true;
+        let isLoggedIn = true;
+        console.log(isAdmin && isLoggedIn);
+
+        let c = 5;
+        c += 3;
+        console.log(c)
+
+        let greeting = 'Hello, ';
+        let name = 'World!';
+        console.log(greeting + name);
+        alert(greeting + name);
+
+        if(x > 5){
+          console.log('x is greater than 5');
+        } else {
+          console.log('x is less than or equal to 5');
+        }//complex statements
+
+        //functions
+        function calculateTotalPrice(items, taxRate){
+          let totalPrice = 0;
+          let totalQuantity = 0;
+
+          for(let i = 0; i < items.length; i++){
+            let itemSubtotal = items[i].price * items[i].quantity;
+            totalPrice += itemSubtotal;
+            totalQuantity += items[i].quantity;
+          }
+          let totalTax = totalPrice * taxRate;
+          let finalTotalPrice = totalPrice + totalTax;
+          return{totalPrice: finalTotalPrice.toFixed(2), totalQuantity: totalQuantity};
+        }
+
+        items = {name: ["shoes", "bags"],
+                 price: [50, 100],
+                 quantity: [4, 10]};
+
+
+                 //uses functions as values
+        let add = function (e,f){
+          return e + f;
+        };
+        let answer = add(2, 3);
+        console.log(answer);
+
+
+        //nested scope
+        function outer(){
+          let f = 10;
+          function inner(){
+            console.log(f);
+          }
+          inner();
+        }
+        outer();
+
+       let human = {name:'John', age: 30};
+       console.log(human);
+       delete human.age;
+       console.log(human);
+
+       //let person = {name: 'John', age: 30};
+       //console.log(person['name']);
+
+       //ARRAYS
+       let colors = ['red', 'green', 'blue'];
+       console.log(colors[0]);
+       console.log(colors.slice(1, 3));
+       colors. push('violet');
+       console.log(colors);
+       colors.pop();
+       console.log(colors);
+       colors.unshift('yellow', 'orange');
+       console.log(colors);
+      </script>
+    </body>
+  </head>
+</html>
